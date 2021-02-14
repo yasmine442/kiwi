@@ -1,5 +1,11 @@
 import React,{useState} from 'react'
 import MovieCard from './MovieCard'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 
@@ -19,9 +25,7 @@ const [formData,setFormData] = useState({name:'',imageUrl:'',desc:''})
 <input placeholder="image"  type="text" onChange={(e)=>setFormData({...formData,imageUrl:e.target.value})} />
 <input  placeholder="desc"  type="text" onChange={(e)=>setFormData({...formData,desc:e.target.value})} />
 <button onClick={(e)=>{setMovies([...movies,formData])}}>ADD</button>
-        </>
-    )
-}
-
+        </>)}
+    
 
 export default MovieList
